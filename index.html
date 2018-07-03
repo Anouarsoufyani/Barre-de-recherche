@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <title></title>
+  </head>
+  <body>
+    <form >
+      <input  id="input" placeholder="Search..." type="text">
+      <button type="button" name="button" onclick="search()">search</button>
+    </form>
+
+<script type="text/javascript">
+
+
+  function search() {
+
+    $('#input').keyup(function() {
+    console.log($(this).val());
+    });
+    var url = "https://www.google.fr/search?q="+ $('#input').val() +"+&oq="+ $('#input').val() +"&aqs=chrome..69i57j69i60l3j0l2.643j0j1&sourceid=chrome&ie=UTF-8"
+    window.location.href = url;
+  console.log($('#input').val())
+    }
+    
+</script>
+  </body>
+</html>
